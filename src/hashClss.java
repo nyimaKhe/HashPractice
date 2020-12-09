@@ -1,23 +1,21 @@
-import java.util.HashMap;
-import java.util.Set;
+
 
 public class hashClss {
 
 	public static void main(String[] args) {
-		HashMap<String, Integer> ids = new HashMap<String, Integer>();
-		ids.put("Negative Pow", 5);
-		ids.put("Sally", 345);
+		Person p1 = new Person("email@email.com", "gluestick");
+		Position pos1 = new Position(10, 10);
+		p1.position = pos1;
 		
-		ids.put("Sally", ids.getOrDefault("Sally", 0)+1);
+		Person p2 = new Person("email@email.com", "gluestick");
+		Position pos2 = new Position(10, 10);
+		System.out.println(p1.hashCode());
+		System.out.println(p2.hashCode());
 		
 		
-		Set<String> keys = ids.keySet();
-
-		for(String key: keys) {
-			System.out.println(key);
-			System.out.println(ids.get(key));
 		}
+		
 		
 	}
 
-}
+
